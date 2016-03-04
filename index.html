@@ -6,39 +6,57 @@ and open the template in the editor.
 -->
 <html>
     <head>
-    <title>CS102</title>
-    <style>
-        body{background-color:     burlywood;
-             color:   tomato}
-                 table{font-size: 180px;
-                 text-align: center}
-                 td{border: 1px solid    indianred}
-        
-        
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <table style="width:100%">
-  <tr>
-    <td>A</td>
-    <td>B</td> 
-    <td>C</td>
-  </tr>
-  <tr>
-    <td>D</td>
-    <td>E</td> 
-    <td>F</td>
-  </tr>
-  <tr>
-  <td>G</td>
-  <td>H</td>
-  <td>I</td>
-  </tr>
-  
-  
-</table>
-<div></div>
-</body>
+        <title>position some divs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .box{
+                height: 10% ;
+                width: 10% ;
+                position: absolute;
+            }
+            #d1{
+             position: absolute;
+             left: 40%;
+             width: 10%  ;
+             top: 45%;
+             height: 10%;
+             background-color: bisque;
+               
+       
+            }
+            #d2{
+             position: absolute;
+             left: 45%;
+             width: 10%  ;
+             top: 50%;
+             opacity: 0.5;
+             height: 10%;
+             background-color: blueviolet;   
+              z-index: 100;  
+            }
+            #d3{
+              position: absolute;
+             left: 45%;
+             width: 5%  ;
+             top: 50%;
+             opacity: 0.5;
+             height: 20%;
+             background-color: blue;   
+              z-index: 100;     
+                
+            }
+                        
+            
+        </style>
+    </head>
+    <body>
+        <form action="" name="f1" id="f1" >
+            <input type="text" name="login" placeholder=""
+            
+        </form>
+        <div id="d1" class="box"> </div>
+        <div id="d2" class="box"> </div>
+        <div id="d3" class="box" style="background-color"> </div>
+    </body>
 </html>
