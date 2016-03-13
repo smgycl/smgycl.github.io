@@ -6,31 +6,71 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>factorial(n)</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scuba diving</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+</script>
+       
+</head>
+<body style="background-color:  lightskyblue;>
+    
+
+ <h1 style="text-decoration: blueviolet"></h1>
+        Welcome to underwater world!  
+
+<form action="action_page.php">
+  
+       First name:
+       <br>
+  <input type="text" name="firstname" ><br>
+       Last name:
+       <br>
+  <input type="text" name="lastname" ><br>
+      Username:
+      <br>
+      <input type="text" name="username" ><br>
+       Email address:
+       <br>
+      <input type="text" name="username" ><br>   
+  
+
+  Have you ever dive before? :
+  <br>
+  
+  <input  type="radio" name="Have you ever dive before?" value="Yes" checked>Yes <br>
+  <input  type="radio" name="Have you ever dive before?" value="No" checked>No <br>    
+  
+      <input type="submit" value="Submit"/> 
+
+      
+      </form>
+     
+ 
+
+            <div id="outer">
+            <span id="inner">
+                Underwater world
+            </span>
+            </div>
+       If you are curious about scuba diving, just click underwater world!
         <script>
-           function.factorial(num) {
-               var res =1;//the result we will return
-               for(var i=2; i<=num; i++){ //loop up to num
-               }
-            return num;
-           } 
-           function calculate() {
-           var. innum 
-           
-               
-           }
-            </script>
-    </head>
-    <body>
-        <div>
-            <form>
-               <input type="text" id="num" value="6" />
-                <input type="text" id="res" placeholder="Here goes "
-                <input type="submit" onclick="calculate();"/>
-            </form>   
-            
-        </div>
-    </body>
+            $('#inner').hover(
+                function() {
+                    $(this).css('background-color',"lightblue");
+                }, 
+                function() {
+                    $(this).css("background-color","lightpink");
+                }
+            );
+    
+            $('#inner').click(
+                function() {
+                    window.location = "http://www.scubadiving.com/";
+                }
+            );
+        </script> 
+
+
+</body>
 </html>
