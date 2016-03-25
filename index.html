@@ -6,30 +6,55 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>        
+
+        <title>JSON Array Homework</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <style>
+            body 
+            {
+             border-color:springgreen;
+             border-width:1px;
+             border: solid;
+             background-image: url("http://media.globaltv.com/uploadedimages/pages/shows/the_simpsons/the_simpsons_smartforms/mainelement.png?n=6428");
+             background-size: cover;
+             font-size: 30px ;
+             color: orange;
+             width: 30%;
+                         }
+        </style>
     </head>
     <body>
-        <h2> JSON Object Creation in Javascript </h2>
-        <p id="demo"></p>
-        <script>
-            var person='{"name": "Fiona", "phone":"55555", "age": "25", "adress": "gulbahce", "height":170, "weight":55 }';
-            var obj= JSON.parse(simge);
         
-        var rat = calcRatio(obj.height, obj.weight);
+            <div id = "avg"></div>
+            <script>
+            var Simpsons = {Simpsons:[
+                    {"name":"Homer", "age":38, "height":170 },
+                    {"name":"Marge", "age":34, "height":170 },
+                    {"name":"Bart", "age":10, "height":140 },
+                    {"name":"Lisa", "age":8, "height":130 },
+                    {"name":"Maggie","age":1, "height":100 }     ]};
+            var avgAge = calcAvgAge(Simpsons);
+            $('#avg').append("Average Age of Simpsons: " + avgAge + "<br>");
+            var avgHeight = calcAvgHeight(Simpsons);
+            $('#avg').append("Average Height of Simpsons: " + avgHeight + "<br>");
+            
+     function calcAvgAge(obj){
+                var totalAge = 0;
+                for(var A = 0; A < obj.Simpsons.length; A++){
+                totalAge += obj.Simpsons[A].age;
+                }
+                return totalAge / obj.Simpsons.length;
+           }
+     function calcAvgHeight(obj){
+           var totalHeight = 0;
+           for(var B = 0; B < obj.Simpsons.length; B++){
+           totalHeight += obj.Simpsons[B].height;
+           }
+           return totalHeight / obj.Simpsons.length;
+            }
+            </script>
         
-        $('#demo').append(
-                obj.name + "<br>" +
-                obj.phone + "<br>" +
-                obj.age + "<br>" +
-                obj.adress + "<br>" +
-                obj.height + "<br>" +
-                obj.weight );
-        var rat = calcRatio
-        
-        </script>
-        <div> </div>
-    </body>
-</html>
+     </body>
+     </html>
