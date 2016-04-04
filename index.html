@@ -6,55 +6,54 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>        
-
-        <title>JSON Array Homework</title>
+        <title>TODO supply a title</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript"></script>
+        <script>
+            $(move);
+            function move() {
+                $('#arrow').draggable();
+                $('#target').droppable(
+                        {
+                    drop: function () {
+                        $('#arrow').draggable("disabled");
+                        $('#target').draggable("disabled");
+                        $('#arrow').css("background-color", "green").html();
+                    }
+                }
+                        );
+            }
+
+
+        </script> 
         <style>
-            body 
-            {
-             border-color:springgreen;
-             border-width:1px;
-             border: solid;
-             background-image: url("http://media.globaltv.com/uploadedimages/pages/shows/the_simpsons/the_simpsons_smartforms/mainelement.png?n=6428");
-             background-size: cover;
-             font-size: 30px ;
-             color: orange;
-             width: 30%;
-                         }
+            #target {
+                width: 150px;
+                height: 150px;
+                padding: 25px;
+
+                background-color: lightpink;
+
+
+            }
+            #arrow{
+                width: 30px;
+                height: 30px;
+                padding: 25px;
+
+                background-color:  deepskyblue;
+
+            }
+
         </style>
     </head>
     <body>
-        
-            <div id = "avg"></div>
-            <script>
-            var Simpsons = {Simpsons:[
-                    {"name":"Homer", "age":38, "height":170 },
-                    {"name":"Marge", "age":34, "height":170 },
-                    {"name":"Bart", "age":10, "height":140 },
-                    {"name":"Lisa", "age":8, "height":130 },
-                    {"name":"Maggie","age":1, "height":100 }     ]};
-            var avgAge = calcAvgAge(Simpsons);
-            $('#avg').append("Average Age of Simpsons: " + avgAge + "<br>");
-            var avgHeight = calcAvgHeight(Simpsons);
-            $('#avg').append("Average Height of Simpsons: " + avgHeight + "<br>");
-            
-     function calcAvgAge(obj){
-                var totalAge = 0;
-                for(var A = 0; A < obj.Simpsons.length; A++){
-                totalAge += obj.Simpsons[A].age;
-                }
-                return totalAge / obj.Simpsons.length;
-           }
-     function calcAvgHeight(obj){
-           var totalHeight = 0;
-           for(var B = 0; B < obj.Simpsons.length; B++){
-           totalHeight += obj.Simpsons[B].height;
-           }
-           return totalHeight / obj.Simpsons.length;
-            }
-            </script>
-        
-     </body>
-     </html>
+
+
+        <div id="target"> target</div>
+        <div id="arrow"> box</div>
+    </body>
+</html>
